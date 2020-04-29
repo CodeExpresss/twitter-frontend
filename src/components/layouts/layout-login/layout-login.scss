@@ -1,0 +1,35 @@
+.layout-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login {
+
+  &__twitter-logo {
+    fill: white;
+    height: 35px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  &__form-errors {
+    width: 600px;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(224, 36, 94);
+  }
+
+  &__links{
+    display: flex;
+  }
+}

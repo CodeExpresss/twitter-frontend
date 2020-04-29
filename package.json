@@ -1,16 +1,18 @@
 {
-  "name": "social-frontend",
+  "name": "twitter-frontend",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "dependencies": {
     "jquery": "^3.4.1",
     "js-cookie": "^2.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router": "latest",
     "react-router-dom": "^5.1.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --hot --host 0.0.0.0",
+    "start": "webpack-dev-server --open --hot --host 127.0.0.1",
     "build": "webpack --watch"
   },
   "eslintConfig": {
@@ -40,6 +42,7 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "components": "^0.1.0",
     "css-loader": "^3.4.2",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",

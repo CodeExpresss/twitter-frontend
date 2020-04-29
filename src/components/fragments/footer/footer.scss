@@ -1,0 +1,15 @@
+.block-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+  justify-content: center;
+  background-color: rgb(21, 32, 43);
+
+  &__item {
+    font-size: 13px;
+    color: rgb(136, 153, 166);
+    padding:10px 15px 0 0;
+  }
+}

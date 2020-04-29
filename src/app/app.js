@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import BlockLayout from '../base-block/block-layout/block-layout';
-import LayoutStore from '../../store/layout';
-import RouterStore from '../../store/route'
+import BlockLayout from '../components/base-block/block-layout/block-layout';
+import LayoutStore from '../store/layout';
+import RouterStore from '../store/route'
 
 import './app.scss';
 
@@ -20,6 +20,8 @@ class App extends Component {
 
       this.routes = [
           route(RouterStore.website.index, LayoutStore.general.index),
+          route(RouterStore.website.login, LayoutStore.general.login),
+          route(RouterStore.website.register, LayoutStore.general.register),
       ];
   }
 
