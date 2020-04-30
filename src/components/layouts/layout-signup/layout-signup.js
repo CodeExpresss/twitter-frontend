@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RouterStore from "../../../store/route";
-import ShardForm from "../../fragments/ShardForm/shard-form";
-import ShardButton from "../../fragments/ShardButton/shard-button";
+import Form from "../../fragments/forms/shard-form";
+import Button from "../../fragments/button/shard-button";
 
 import "./layout-signup.scss";
 
@@ -22,10 +22,10 @@ class LayoutSignup extends Component {
                     </div>
                     <div className="sign-up__form-errors">Errors with password</div>
                     <form action={RouterStore.api.user.register}>
-                        <ShardForm type={'register'} button_style='primary' column size={'big'} parent_class/>
+                        <Form type={'register'} button_style='primary' column size={'big'} parent_class/>
                     </form>
                     <div className="sign-up__links">
-                        <ShardButton to={RouterStore.website.register} text={'Уже зарегестированы? Кликай сюда!'} />
+                        <Button to={RouterStore.website.register} text={'Уже зарегестированы? Кликай сюда!'} />
                     </div>
                 </div>
             </div>

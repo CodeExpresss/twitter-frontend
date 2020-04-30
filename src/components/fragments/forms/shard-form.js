@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import ShardButton from "../ShardButton/shard-button";
+import ShardButton from "../button/shard-button";
 
 import "./shard-form.scss"
 
-class ShardForm extends Component {
+class Form extends Component {
     render() {
         const {
             flex, type, button_style, column, size, parent_class
@@ -74,4 +74,4 @@ class ShardForm extends Component {
     }
 }
 
-export default ShardForm;
+export default Form;

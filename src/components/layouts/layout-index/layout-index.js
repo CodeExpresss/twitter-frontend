@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Redirect} from "react-router";
 
 import RouterStore from "../../../store/route";
-import ShardButton from "../../fragments/ShardButton/shard-button";
-import ShardForm from "../../fragments/ShardForm/shard-form";
+import Button from "../../fragments/button/shard-button";
+import Form from "../../fragments/forms/shard-form";
 import Footer from "../../fragments/footer/footer";
 
 import "./layout-index.scss"
@@ -59,7 +59,7 @@ class LayoutIndex extends Component {
                     <div className="layout-index__right-bar">
                         <div className="right-bar__form">
                             <form action={RouterStore.api.user.login}>
-                                <ShardForm type={'login'} button_style={'secondary'} flex/>
+                                <Form type={'login'} button_style={'secondary'} flex/>
                             </form>
                         </div>
                         <div className="layout-index__right-bar__wrap">
@@ -77,8 +77,8 @@ class LayoutIndex extends Component {
                                 <div className="right-bar__content__subtitle">
                                     Присоединяйтесь к Твиттеру прямо сейчас!
                                 </div>
-                                <ShardButton to={RouterStore.website.register} text={"Зарегестрироваться"} style="primary" />
-                                <ShardButton to={RouterStore.website.login} text={"Войти"} style="secondary" />
+                                <Button to={RouterStore.website.register} text={"Зарегестрироваться"} style="primary" />
+                                <Button to={RouterStore.website.login} text={"Войти"} style="secondary" />
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './shard-button.scss';
 
-class ShardButton extends Component {
+class Button extends Component {
     render() {
         const {
             type, style, to, text, size
@@ -14,6 +14,11 @@ class ShardButton extends Component {
         if(size === 'big') {
             classNames.push(`${baseClass}__big`);
         }
+
+        if(size === 'medium') {
+            classNames.push(`${baseClass}__medium`);
+        }
+
         if (style === 'secondary') {
             classNames.push(`${baseClass}__secondary`);
         }
@@ -36,4 +41,4 @@ class ShardButton extends Component {
     }
 }
 
-export default ShardButton;
+export default Button;

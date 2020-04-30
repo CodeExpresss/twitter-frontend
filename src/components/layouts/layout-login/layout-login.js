@@ -3,8 +3,8 @@ import {Redirect} from "react-router";
 
 import RouterStore from "../../../store/route";
 
-import ShardForm from "../../fragments/ShardForm/shard-form";
-import ShardButton from "../../fragments/ShardButton/shard-button";
+import Form from "../../fragments/forms/shard-form";
+import Button from "../../fragments/button/shard-button";
 
 import './layout-login.scss';
 
@@ -26,11 +26,11 @@ class LayoutLogin extends Component {
                     </div>
                     <div className="login__form-errors">Errors with password</div>
                     <form action={RouterStore.api.user.login}>
-                        <ShardForm type={'login'} button_style='primary' column size={'big'} parent_class/>
+                        <Form type={'login'} button_style='primary' column size={'big'} parent_class/>
                     </form>
                     <div className="login__links">
-                        <ShardButton to={RouterStore.website.register} text={'Забыли пароль?'} />
-                        <ShardButton to={RouterStore.website.register} text={'Зарегестрироваться в Твиттере'} />
+                        <Button to={RouterStore.website.register} text={'Забыли пароль?'} />
+                        <Button to={RouterStore.website.register} text={'Зарегестрироваться в Твиттере'} />
                     </div>
                 </div>
             </div>

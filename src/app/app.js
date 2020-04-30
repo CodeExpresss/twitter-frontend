@@ -22,6 +22,7 @@ class App extends Component {
           route(RouterStore.website.index, LayoutStore.general.index),
           route(RouterStore.website.login, LayoutStore.general.login),
           route(RouterStore.website.register, LayoutStore.general.register),
+          route(RouterStore.website.home, LayoutStore.general.home),
       ];
   }
 

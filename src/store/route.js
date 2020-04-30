@@ -26,6 +26,6 @@ export default {
         profile: '/profile/',
         login: '/login/',
         register: '/signup/',
-        home: 'home',
+        home: '/home/',
     },
 }

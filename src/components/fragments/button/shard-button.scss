@@ -33,6 +33,12 @@
     width: 100%;
   }
 
+  &__medium {
+    padding: 15px 20px;
+    width: 200px;
+    margin: 0;
+  }
+
   &__secondary {
     font-weight: bolder;
     color: rgb(29, 161, 224);
