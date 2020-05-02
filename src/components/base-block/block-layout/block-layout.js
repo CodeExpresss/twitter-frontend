@@ -15,10 +15,10 @@ class BlockLayout extends Component {
         const defaultLayout = <LayoutIndex storage={storage} />;
         const layouts = new Map();
 
-        layouts.set(LayoutStore.general.index, <LayoutIndex storage={storage} />);
+        layouts.set(LayoutStore.general.index, <LayoutIndex storage={storage}/>);
         layouts.set(LayoutStore.general.login, <LayoutLogin storage={storage} />);
         layouts.set(LayoutStore.general.register, <LayoutSignup storage={storage} />);
-        layouts.set(LayoutStore.general.home, <LayoutHome storage={storage} />);
+        layouts.set(LayoutStore.general.home, <LayoutHome storage={storage}  layout={layout}/>);
 
         const result = layouts.get(layout);
         return result || defaultLayout;

@@ -1,0 +1,44 @@
+.component-header-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 0 5px;
+  border-radius: 50px;
+  transition: 0.5s;
+
+  &__current span {
+    color: rgb(29, 161, 224);
+  }
+
+  &__current svg {
+    fill: rgb(29, 161, 224);
+  }
+
+  &__svg {
+    fill: white;
+    height: 30px;
+  }
+
+  &:hover  {
+    background-color: rgba(29, 161, 224, 0.1);
+    text-decoration: none;
+  }
+
+  &:hover &__svg {
+    fill: rgb(29, 161, 224);
+  }
+  &:hover &__span {
+    color: rgb(29, 161, 224);
+  }
+
+  &__span {
+    margin:0 15px 0 20px;
+
+    color: white;
+
+    font-size: 19px;
+    font-weight: bolder;
+  }
+
+}

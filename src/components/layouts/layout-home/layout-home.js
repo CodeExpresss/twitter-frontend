@@ -6,8 +6,9 @@ import "./layout-home.scss"
 
 class LayoutHome extends Component {
     render() {
+        const { layout } = this.props;
         return(
-            <Page></Page>
+            <Page layout={layout}></Page>
         );
     }
 }

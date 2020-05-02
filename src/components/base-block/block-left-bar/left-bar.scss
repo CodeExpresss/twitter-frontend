@@ -1,11 +1,12 @@
-.layout {
+.component {
 
   &__left-bar {
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin: 15px 0 0 80px;
-    width: 250px;
+    justify-content: space-between;
+    margin: 10px 0 0 70px;
+    min-width: 280px;
   }
 
 }
@@ -16,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 100%;
+    margin-left: 10px;
   }
 
   &__svg {
@@ -52,9 +53,35 @@
 
       color: white;
 
-      font-size: 19px;
+      font-size: 17px;
       font-weight: bolder;
     }
 
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 20px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(29, 161, 224, 0.1);
+    }
+
+    &__avatar {
+      height: 40px;
+      margin: 5px;
+      border-radius: 50%
+    }
+
+    &__user {
+      color: rgb(136, 153, 166);
+      font-size: 15px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
   }
 }

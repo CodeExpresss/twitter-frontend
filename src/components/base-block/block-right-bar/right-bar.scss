@@ -1,0 +1,44 @@
+.component {
+  &__right-bar {
+    padding: 10px 80px 0 30px;
+    width: 100%;
+  }
+}
+
+.right-bar {
+
+  &__search {
+
+    &__input {
+      border: 1px solid rgb(37, 51, 65);
+      background: rgb(37, 51, 65);
+      padding: 10px 15px;
+      border-radius: 50px;
+      outline: 0;
+      font-size: 17px;
+      color: white;
+      width: 100%;
+
+      &::-webkit-input-placeholder {
+        color: rgb(136, 153, 166);
+        font-weight: normal;
+      }
+
+      &:focus  {
+        border-color: rgb(29, 161, 224);
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      margin: 5px;
+      font-size: 14px;
+      font-weight: normal;
+      color: rgb(136, 153, 166);
+    }
+  }
+}

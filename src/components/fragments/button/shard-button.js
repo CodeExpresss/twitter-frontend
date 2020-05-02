@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import './shard-button.scss';
+import RouterStore from "../../../store/route";
 
 class Button extends Component {
     render() {
