@@ -1,14 +1,65 @@
 import React, { Component } from 'react';
-import {Redirect} from "react-router";
+import { Redirect, withRouter } from 'react-router-dom';
+import $ from "jquery";
 
 import RouterStore from "../../../store/route";
 
 import Form from "../../fragments/forms/shard-form";
 import Button from "../../fragments/button/shard-button";
+import Carrier from "managers/carrier";
 
 import './layout-login.scss';
+import ShardButton from "components/fragments/button/shard-button";
 
 class LayoutLogin extends Component {
+    constructor(props) {
+        super(props);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+
+        this.state = {};
+    }
+
+    handleEmailChange(event) {
+        this.setState({ email: event.target.value });
+    }
+
+    handlePasswordChange(event) {
+        this.setState({ password: event.target.value });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+
+        const { email, password } = this.state;
+        const { storage } = this.props;
+
+        const payload = {
+            email,
+            password,
+        };
+
+        const baseClass = 'login__form-errors';
+
+        const $target = $(event.target);
+        const action = $target.attr('action');
+
+        const inputGroupSelector = `[class="${baseClass}"]`;
+
+        if (!(email && password)) {
+            $(inputGroupSelector).text('Заполните поле');
+            $(inputGroupSelector).addClass(errorMod);
+            return;
+        }
+
+        console.log(payload);
+        Carrier.post(action, { payload }).then((body) => {
+            console.log(body);
+            this.props.history.push('/home/');
+        });
+    }
+
     render() {
 
         return (
@@ -24,9 +75,21 @@ class LayoutLogin extends Component {
                     <div className="login__title">
                         Войти в Твиттер
                     </div>
-                    <div className="login__form-errors">Errors with password</div>
-                    <form action={RouterStore.api.user.login}>
-                        <Form type={'login'} button_style='primary' column size={'big'} parent_class/>
+                    <div className="login__form-errors"></div>
+                    <form action={RouterStore.api.user.login} onSubmit={this.handleSubmit}>
+                        <div className="component-form component-form__column">
+                            <div className="component-form__item">
+                                <label className="component-form__item__label">Email</label>
+                                <input className="component-form__item__input" type="email" name="email" autoComplete="on" onChange={this.handleEmailChange}/>
+                            </div>
+                            <div className="component-form__item">
+                                <label className="component-form__item__label">Password</label>
+                                <input className="component-form__item__input" name="password" type="password" onChange={this.handlePasswordChange}/>
+                            </div>
+                            <div className="component-form__form__item component-form__form__item-wight">
+                                <ShardButton type="submit" text={"Войти"} style={'primary'} size={'big'}/>
+                            </div>
+                        </div>
                     </form>
                     <div className="login__links">
                         <Button to={RouterStore.website.register} text={'Забыли пароль?'} />
@@ -38,4 +101,4 @@ class LayoutLogin extends Component {
 
     }
 }
-export  default  LayoutLogin;
+export default withRouter(LayoutLogin);

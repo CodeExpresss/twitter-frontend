@@ -1,5 +1,5 @@
 export default {
-    baseBackendUrl: 'http://localhost:8000',
+    baseBackendUrl: 'http://127.0.0.1:8000',
     //TODO baseStaticUrl
 
     api: {
@@ -10,8 +10,9 @@ export default {
             update: '/api/user/update/'
         },
         profile: {
-            current: '/api/profile/current',
+            current: '/api/user/current/',
             update: 'api/profile/update',
+            follow: '/api/profile/follow/',
         },
         tweet: {
             index: '/api/tweet/index/',
@@ -27,5 +28,6 @@ export default {
         login: '/login/',
         register: '/signup/',
         home: '/home/',
+        viewProfile: '/profile/:id',
     },
 }

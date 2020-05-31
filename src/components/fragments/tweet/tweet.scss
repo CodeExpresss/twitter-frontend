@@ -1,0 +1,47 @@
+.component-tweet {
+  padding: 10px 15px;
+  display: flex;
+  border-bottom: 1px solid rgb(56, 68, 77);
+
+  &__svg {
+    fill: rgb(136, 153, 166);
+    height: 25px;
+    cursor: pointer;
+  }
+
+  &__shared-item {
+    margin: 5px 10px 0;
+    color: rgb(136, 153, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      margin: 0 5px;
+    }
+  }
+
+  &__avatar {
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    margin-left: 10px;
+    color: white;
+
+    &__author{
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      line-height: 1.5em;
+    }
+
+    &__bottom {
+      margin-top: 5px;
+      display: flex;
+    }
+  }
+}

@@ -10,7 +10,10 @@ import "./left-bar.scss"
 
 class LeftBar extends Component {
     render() {
-        const { layout } = this.props;
+        const { layout, storage } = this.props;
+
+        const user = storage.get('user');
+
         return(
             <div className="component__left-bar">
                 <div className="left-bar__top">
@@ -22,12 +25,12 @@ class LeftBar extends Component {
                         </g>
                     </svg>
                     <HeaderLinks layout={layout}/>
-                    <Button to={RouterStore.website.home} text={'чирикать'} size={'medium'} style={'primary'}/>
+                    <Button to={RouterStore.website.home} text={'Чирикать'} size={'medium'} style={'primary'}/>
                 </div>
                 <div className="left-bar__bottom">
                     <img className="left-bar__bottom__avatar" src={avatar} />
                     <div className="left-bar__bottom__user">
-                        @ AlexSarafa2n
+                        { user.get('nickname') || 'Неопознанное привидение' }
                     </div>
                     <svg viewBox="0 0 24 24"
                          className="left-bar__svg">

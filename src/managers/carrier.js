@@ -1,5 +1,5 @@
-import Cookie from 'js-cookie'
-import RouterStore from '../store/route'
+import Cookies from 'js-cookie';
+import RouterStore from '../store/route';
 
 
 export default class Carrier {
@@ -21,10 +21,29 @@ export default class Carrier {
             credentials: 'include',
             mode: 'cors',
             headers: {
-                'X-CSRFToken': CSRFToken,
             },
         }).then((response) => response.json());
     }
 
+    static post(url, params = {}) {
+        const {
+            payload: data,
+            headers,
+            serialize = true,
+            external = false,
+        } = params;
+
+        const _url = external ? url : this.getBackendUrl(url);
+
+        return fetch(_url, {
+            method: 'POST',
+            credentials: 'include',
+            mode: 'cors',
+            headers: {
+                ...headers,
+            },
+            body: serialize ? JSON.stringify(data) : data,
+        }).then((response) => response.json());
+    }
 
 }

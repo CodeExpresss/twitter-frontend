@@ -1,0 +1,81 @@
+.layout-home {
+
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    padding: 15px;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+
+    border-bottom: 1px solid rgb(56, 68, 77);
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+
+    &__wrap {
+    }
+  }
+}
+
+.form {
+  &__add-tweet {
+    padding: 10px 15px;
+    display: flex;
+
+    border-bottom: 10px solid rgb(37, 51, 65);
+
+    &__profile {
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    &__form {
+      width: 100%;
+      margin-left: 10px;
+    }
+
+    &__input {
+      width: 100%;
+      outline: 0;
+
+      white-space: pre-wrap;
+      resize: none;
+      min-height: 50px;
+      overflow: auto;
+
+      border: 0;
+
+      background-color: #15202b;
+      color: white;
+
+      font-size: 20px;
+
+    }
+
+    &__errors {
+      color: darkred;
+      font-weight: bolder;
+      font-style: 20px;
+    }
+
+    &__bottom {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__svg {
+        fill: #1da1e0;
+        height: 25px;
+        cursor: pointer;
+      }
+    }
+
+  }
+}

@@ -7,14 +7,12 @@ import "./page.scss"
 
 class Page extends Component {
     render() {
-        const { layout } = this.props;
+        const { layout, storage } = this.props;
         return (
             <div className="component-layout__shard">
-                <LeftBar layout={layout}/>
-                <div className="layout__content-wrap">
-                    <div className="content">
-
-                    </div>
+                <LeftBar layout={layout} storage={storage}/>
+                <div className="component__content-wrap">
+                        { this.props.children }
                 </div>
                 <RightBar />
             </div>

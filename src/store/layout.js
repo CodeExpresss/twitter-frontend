@@ -5,5 +5,6 @@ export default {
         profile: 'general:profile',
         register: 'general:register',
         home: 'general:home',
+        viewProfile: 'general:viewProfile'
     }
 }

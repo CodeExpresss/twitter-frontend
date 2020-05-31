@@ -1,14 +1,9 @@
-.layout {
+.component {
 
   &__content-wrap {
-    overflow: scroll;
-    position: relative;
+    overflow: hidden;
     min-width: 598px;
     border-left: 1px solid rgb(56, 68, 77);
     border-right: 1px solid rgb(56, 68, 77);
   }
-}
-
-.content {
-  height: 200vh;
 }

@@ -33,11 +33,11 @@ class Form extends Component {
                 <div className={className}>
                     <div className="component-form__item">
                         <label className="component-form__item__label">Email</label>
-                        <input className="component-form__item__input" type="text" autoComplete="on" />
+                        <input className="component-form__item__input" type="email" name="email" autoComplete="on" />
                     </div>
                     <div className="component-form__item">
                         <label className="component-form__item__label">Password</label>
-                        <input className="component-form__item__input" type="password"/>
+                        <input className="component-form__item__input" name="password" type="password"/>
                     </div>
                     <div className={parentClass}>
                         <ShardButton type="submit" text={"Войти"} style={button_style} size={size}/>
